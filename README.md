@@ -1,1 +1,1 @@
-# BezierSmooth
+JS functionality to plot Bezier smoothed function diagrams into the canvas

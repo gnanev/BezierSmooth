@@ -1,0 +1,28 @@
+<html>
+<body>
+<canvas id="container_random" width="700" height="300" style="border:3px solid #0050ff; background-color: #000000;"></canvas>
+
+<script src="bezier_plot.js"></script>
+
+<script>
+
+    var container_random = document.getElementById("container_random");
+    var context_random = container_random.getContext("2d");
+    
+    context_random.imageSmoothingEnabled = true;
+
+    var samples = [];
+    var maxAmplitude = 300;
+    var maxSamplesCount = 200;
+
+    for (i = 0; i < maxSamplesCount; i++) {
+        samples[i] = Math.floor(Math.random() * maxAmplitude);
+    }
+
+    smooth = (container_random.width / samples.length);
+    diagram(context_random, samples, smooth / 2, smooth);
+
+</script>
+
+</body>
+</html>
